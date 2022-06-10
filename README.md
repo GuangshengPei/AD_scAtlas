@@ -15,6 +15,9 @@ To predict significant intercellular communications between the control and AD g
 # 3. Drug repurposing analysis
 &#8194;&#8194; To predict potentially repurposable drugs for AD, we applied the strategy performed in CeDR [35] to conduct the cellular drug response analysis, which provides references for new therapeutic development and drug combination design at single cell resolution. To this end, we downloaded the drug-induced gene expression matrix from CMap database (version: build 02) which measures 1309 FDA approved drugs with different doses across five cell lines, yielding a total of 6100 profiles [34]. The matrix was ranked based on the DEGs (drug treated versus untreated) and each probe was subsequently mapped to gene symbols. Each scRNA-seq/snRNA-seq dataset was processed followed by the pipeline illustrated in Scanpy package [36]. Applying the “anti-correlation” procedure, we defined the cellular gene signatures by combining the top 250 and bottom 250 genes across cell types and within cell type. We further required the drug up-regulated genes to be enriched in cellular down-regulated genes, and vice versa [35]. Moreover, the expression of overlapping genes should be significantly anti-correlated. We independently conducted two Chi-square tests for enrichment analysis and employed the Spearman correlation coefficient for anti-correlation. The drugs with significant p-values were subsequently denoted as AD cell type-associated drug candidates. The code is available from another study http://gitub.com/LPH-BIG/scDrug.
 
+## Citation
+Pei G, Fernandes, B, Wang Y, Manuel A, Jia P, Zhao Z. A single-cell atlas of the human brain in Alzheimer’s disease and its implications for 
+personalized drug repositioning. In submission.
 
 ## Help
 If you have any question, comment or suggestion, please contact peiguangsheng@gmail.com.
